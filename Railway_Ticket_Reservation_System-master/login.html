@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+    main {
+        background-image: url(images/stopping.jpg);
+        background-size: cover;
+    } 
+    </style>
+	<script language="JavaScript">
+	function OpenWindow()
+	{var Location = EmailAddress.indexOf('@')
+		if(Location== -1)
+		{
+			alert("You entered a wrong Email ID")
+		}
+        else{
+            Mywindow = window.open('index.html')
+        }
+	}
+	function ValidateEmail(EmailAddress)
+	{
+		var Location = EmailAddress.indexOf('@')
+		if(Location== -1)
+		{
+			alert("You entered a wrong Email ID")
+		}
+	}
+	</script>
+</head>
+<body>
+    <header>
+        <header>
+            <nav>
+             <a href="index.html" class="btn">Home</a>
+             <a href="login.html" class="btn">Login</a>
+            </nav>
+             </header>
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="title-text">
+                  <div class="logt">
+                      Login
+                  </div>
+                </div>
+                <!-- <div class="form-container">
+                    <div class="logt">
+
+                    </div>
+                    <div class="slide-controls">
+                        <input type="radio" name="slide" id="login" checked>
+
+                        <label for="login" class="slide login">Login</label>
+        
+                        <div class="slider-tab">      
+                    </div>
+                </div> -->
+                <div class="form-inner">
+                    <form name='f1' action="logindetails.php" method="post">
+                            <div class="field">
+                                <input type="text" name="Fname" placeholder="Email Address" required onblur="ValidateEmail(this.value)">
+                            </div>
+                            <div class="field">
+                                <input type="password" name="password" placeholder="Password" required>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer">
+                                </div>
+                                <input type="submit" value="Login" name="submit" onclick="OpenWindow()">
+                            </div>
+                    </form>
+                    
+                </div>
+            </div>
+            </div>
+        </main>
+      
+    
+    
+</body>
+</html>
